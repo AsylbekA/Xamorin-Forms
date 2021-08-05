@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="Xamo.Views.BasePageTT">
+
+
+    <!--<StackLayout x:Name="Элементы в Xamarin и их свойства">
+        <StackLayout Padding="20">
+            <Frame BorderColor="Gray" BackgroundColor="#e1e1e1" CornerRadius="8">
+                <Label Text="Xamarin Forms" FontSize="Large" HorizontalOptions="Center"  />
+            </Frame>
+
+        </StackLayout>
+
+        <StackLayout>
+
+            <Image Source="xamarin.png"  Aspect="AspectFill"></Image>
+
+            <Label x:Name="label" Text="Выберите дату" FontSize="Medium"/>
+            <DatePicker Format="D" DateSelected="DatePicker_OnDateSelected">
+                <DatePicker.MinimumDate>01/01/2016</DatePicker.MinimumDate>
+                <DatePicker.MaximumDate>01/01/2031</DatePicker.MaximumDate>
+            </DatePicker>
+            <Label Padding="20" x:Name="header" Text="Языки программирования" FontSize="Large"/>
+            <Picker x:Name="picker" SelectedIndexChanged="Picker_OnSelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>C#</x:String>
+                    <x:String>C/C++</x:String>
+                    <x:String>Java</x:String>
+                    <x:String>JavaScript</x:String>
+                    <x:String>PHP</x:String>
+                    <x:String>Node JS</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+
+        --><!--Stepper и Slider--><!--
+
+        <StackLayout>
+            <Label x:Name="header" FontSize="Large" Text="Stepper"></Label>
+            <Slider Minimum="0" Maximum="10" Value="30"  ValueChanged="Stepper_OnValueChanged"
+                 MinimumTrackColor="DeepPink" MaximumTrackColor="Gray" ThumbColor="DeepPink"></Slider>
+        </StackLayout>
+
+        <StackLayout>
+            <Label x:Name="headers" Text="Stepper" FontSize="Large" />
+            <Stepper Minimum="0" Maximum="10" Increment="0.5" ValueChanged="OnStepperValueChanged" />
+        </StackLayout>
+
+        --><!--Переключатель Switch--><!--
+
+        <StackLayout>
+            <Label Text="" FontSize="Large" HorizontalOptions="Center" />
+            <Switch IsToggled="True" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Toggled="Switch_OnToggled" ThumbColor="Black" OnColor="AntiqueWhite"></Switch>
+            <Label x:Name="label" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+
+        --><!--TableView--><!--
+
+        <StackLayout>
+            <Label x:Name="Loginlbl" FontSize="Large"></Label>
+            <Label x:Name="savelbl" FontSize="Large"></Label>
+            <TableView>
+                <TableView.Root>
+                    <TableRoot>
+                        <TableSection Title="Персональные данные">
+                            <EntryCell x:Name="LoginEntry" Label="Логин: " Keyboard="Default" Placeholder="Введите логин" Completed="LoginEntry_OnCompleted"/>
+                            <SwitchCell x:Name="saveSwitch" Text="Сохранить" OnChanged="SaveSwitch_OnOnChanged"/>
+                        </TableSection>
+                        <TableSection Title="Контакты">
+                            <EntryCell Label="Телефон: " Keyboard="Telephone" Placeholder="введите телефон"/>
+                            <EntryCell Label="Email: " Keyboard="Email" Placeholder="введите email"/>
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+
+        --><!--WebView--><!--
+
+    </StackLayout>-->
+
+
+
+
+    <!--<StackLayout x:Name="Glava5">
+        <Label VerticalOptions="Center" HorizontalOptions="Center">
+            <Label.Text>
+                <OnPlatform x:TypeArguments="system:String"
+                    iOS="iOS"
+                    Android="Android"
+                    WinPhone="WinPhone"/>
+            </Label.Text>
+
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color" iOS="Yellow" Android="Green" WinPhone="Red"/>
+            </Label.TextColor>
+        </Label>
+    </StackLayout>-->
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+            <OnPlatform x:Key="TextColor" x:TypeArguments="Color"
+                        iOS="Red"
+                        Android="Green"
+                        WinPhone="Blue"/>
+        <!--<Color x:Key="TextColor">#004d40</Color>-->
+            <Color x:Key="BackColor">#e1e1e1</Color>
+        <x:Double x:Key="FFontSize">22</x:Double>
+    </ResourceDictionary>
+</ContentPage.Resources>
+    <StackLayout x:Name="Glava6">
+        <Button Text="iOS" TextColor="{StaticResource Key=TextColor}" BackgroundColor="{StaticResource Key=BackColor}" FontSize="{StaticResource Key=FFontSize}"/>
+        <Button Text="Android" TextColor="{StaticResource Key=TextColor}" BackgroundColor="{StaticResource Key=BackColor}" FontSize="{StaticResource Key=FFontSize}"/>
+    </StackLayout>
+</ContentPage>
+    
